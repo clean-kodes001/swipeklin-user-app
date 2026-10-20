@@ -819,9 +819,9 @@ const HomeInner = ({}) => {
                   {form.values?.clean_type && (
                     <Details style={styles.detailsMargin}>
                       <View style={styles.detailsContent}>
-                        {/* <DetailsText1>
+                         <DetailsText1>
                           {form.values?.clean_type?.name}
-                        </DetailsText1> */}
+                        </DetailsText1> 
                         <DetailsText2>
                           {authenticatedData?.clean_types
                             ?.find(i => i.id === form.values?.clean_type?.id)
