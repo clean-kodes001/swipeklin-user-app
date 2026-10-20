@@ -1,0 +1,11 @@
+pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> 
+    ex.autolinkLibrariesFromCommand(["node", "node_modules/@react-native-community/cli/build/bin.js", "config"])
+}
+rootProject.name = 'SwipeKlin'
+include ':app'
+include ':react-native-community-geolocation'
+project(':react-native-community-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/geolocation/android')
+include ':react-native-vector-icons-common'
+project(':react-native-vector-icons-common').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-vector-icons/common/android')
